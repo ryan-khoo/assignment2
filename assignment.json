@@ -3,7 +3,7 @@
   "title": "Suicide Rates Overview",
   "width": 700,
   "height": 500,
-  "data": {"url": "https://ryan-khoo.github.io/assignment2/master.json"},
+  
   "transform": [
     {"filter": "datum.year == 2000"}
   ],

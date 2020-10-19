@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "Suicide Rates Overview",
-  "width": 800,
-  "height": 600,
+  "width": 700,
+  "height": 500,
   "data": {"url": "https://ryan-khoo.github.io/assignment2/master.json"},
   "transform": [
     {"filter": "datum.year == 2000"}

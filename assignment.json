@@ -21,6 +21,6 @@
       "aggregate": "sum",
       "field": "suicides_no",
       "title": "Suicide cases"
-    },
+    }
   }
 }

@@ -22,10 +22,5 @@
       "field": "suicides_no",
       "title": "Suicide cases"
     },
-    
-    // "tooltip": [
-    //   {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-    //   {"field": "Active", "type": "quantitative"}
-    // ]
   }
 }

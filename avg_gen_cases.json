@@ -1,0 +1,11 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Average Suicide Cases from Different Generations",
+  "data": {"url": "https://ryan-khoo.github.io/assignment2/master.json"},
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "year", "type": "temporal"},
+    "y": {"field": "suicides_no", "type": "quantitative"},
+    "color": {"field": "Generations", "type": "nominal"}
+  }
+}

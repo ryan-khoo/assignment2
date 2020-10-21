@@ -1,24 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "Suicide Rates Overview",
-  "width": 700,
-  "height": 500,
   "data": {"url": "https://ryan-khoo.github.io/assignment2/master.json"},
-  "transform": [
-    {"filter": "datum.year == 2000"}
-  ],
-  "height" : {"step": 20},
-  "mark": "bar",
+  "mark": "arc",
   "encoding": {
-    "y":{
-      "field": "sex",
-      "type": "ordinal",
-      "sort": "-x"
-    },
-    "x": {
-      "aggregate": "sum",
-      "field": "suicides_no",
-      "title": "Suicide cases"
-    }
-  }
+    "theta": {"field": "suicides_no", "type": "quantitative"},
+    "color": {"field": "sex", "type": "nominal"}
+  },
+  "view": {"stroke": null}
 }

@@ -1,0 +1,25 @@
+// MAIN PIE CHART FOR MALE VS FEMALE
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Suicide Cases among Gender",
+  "data": {"url": "https://ryan-khoo.github.io/assignment2/master.json"},
+
+  "encoding": {
+    "theta": {"field": "suicides_no", "type": "quantitative", "aggregate": "sum"},
+    "tooltip": {"aggregate": "sum", "field": "suicides_no", "type": "quantitative"},
+    "color": {
+      "field": "sex", "type": "nominal",
+      "scale": {"range": ["#ffcccc", "#99ccff"]}}
+    
+  },
+  "layer": [{
+    "mark": {"type": "arc", "outerRadius": 90}
+  }, {
+    "mark": {"type": "text", "radius": 120},
+    "encoding": {
+      "text":{"field":"sex", "type": "nominal"}
+    }
+  }],
+  
+  "view": {"stroke": null}
+}

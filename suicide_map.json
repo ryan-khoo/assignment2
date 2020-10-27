@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Suicide Cases",
+  "width": 700,
+  "height": 400,
+  "data": {
+    "url": "https://ryan-khoo.github.io/assignment2/world_map_01.json",
+    "format": {
+      "type": "topojson",
+      "feature": "ne_110m_admin_0_countries"
+    }
+  },
+  "transform": [{
+    "lookup": "ne_110m_admin_0_countries",
+    "from":{
+      "data":{
+        "url": "https://ryan-khoo.github.io/assignment2/master.csv"
+      },
+      "key": "ne_110m_admin_0_countries",
+      "fields": ["suicides_no"]
+    }
+  }],
+  
+  "projection": {
+    "type": "mercator"
+  },
+  "mark": "geoshape",
+  "encoding": {
+    "color":{
+      "field": "suicides_no",
+      "type": "quantitative"
+    }
+  }
+
+}

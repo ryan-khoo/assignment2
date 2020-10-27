@@ -1,0 +1,43 @@
+// BAR CHART: SUICIDE CASES WITH SLIDER [DONE] //
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Overview of Suicide Cases by Countries",
+  "data": {"url": "https://ryan-khoo.github.io/assignment2/countries_cases.csv"},
+  "width": "container",
+  "height": 300,
+  "mark": "bar",
+
+  "params": [
+    {
+      "name": "countries",
+      "value": 5,
+      "bind": {
+        "input": "range",
+        "min": 1,
+        "max": 101,
+        "step": 1,
+        "name": "Top countries:"
+      }
+    }
+  ],
+
+  "transform": [
+    {"filter":"countries >= datum.index"}
+  ],
+
+  "encoding": {
+    "x": {
+      "field": "country",
+      "type": "ordinal",
+      "sort": "-y",
+      "axis": {"title": null, "labelAngle":-50}
+    },
+    "y":{
+      "field": "cases",
+      "type": "quantitative",
+      "aggregate": "sum",
+      "axis": {"grid":true, "gridOpacity": 0.3},
+      "title": "Total cases"
+    }
+  }
+}

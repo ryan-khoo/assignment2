@@ -1,25 +1,46 @@
-// MAIN PIE CHART FOR MALE VS FEMALE
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "Suicide Cases among Gender",
-  "data": {"url": "https://ryan-khoo.github.io/assignment2/master.json"},
+  "data": {"url": "https://ryan-khoo.github.io/assignment2/male_female_pie.csv"},
+
+  "params": [
+    {
+      "name": "years",
+      "value": 1985,
+      "bind": {
+        "input": "range",
+        "min": 1985,
+        "max": 2016,
+        "step": 1,
+        "name": "YEAR:"
+      }
+    }
+  ],
+
+  "width": 250, "height": 250,
+
+  "transform": [
+    {
+      "aggregate": [{"op":"sum","field":"cases", "as": "sum_cases"}],
+      "groupby":["year", "sex"]
+    },
+    {"filter": "datum.year == years"}
+  ],
+
+  "mark": "arc",
 
   "encoding": {
-    "theta": {"field": "suicides_no", "type": "quantitative", "aggregate": "sum"},
-    "tooltip": {"aggregate": "sum", "field": "suicides_no", "type": "quantitative"},
+    "theta": {"field": "sum_cases", "type":"quantitative"},
     "color": {
-      "field": "sex", "type": "nominal",
-      "scale": {"range": ["#ffcccc", "#99ccff"]}}
-    
+      "field": "sex", 
+      "type":"nominal",
+      "scale": {"range": ["#ffb3b3", "#99bbff"]}
+    },
+    "tooltip": [
+      {"field": "sex", "type": "nominal"},
+      {"field": "sum_cases", "type": "quantitative"}
+    ]
   },
-  "layer": [{
-    "mark": {"type": "arc", "outerRadius": 90}
-  }, {
-    "mark": {"type": "text", "radius": 120},
-    "encoding": {
-      "text":{"field":"sex", "type": "nominal"}
-    }
-  }],
-  
   "view": {"stroke": null}
+
 }

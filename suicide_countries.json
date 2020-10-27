@@ -1,4 +1,3 @@
-// BAR CHART: SUICIDE CASES WITH SLIDER [DONE] //
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "Overview of Suicide Cases by Countries",

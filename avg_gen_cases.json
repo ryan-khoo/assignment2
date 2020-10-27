@@ -3,7 +3,7 @@
   "title": "Average Suicide Cases from Different Generations",
   "data": {"url": "https://ryan-khoo.github.io/assignment2/master.csv"},
   "mark": "area",
-  "width": 950, "height": 300,
+  "width": 850, "height": 300,
   "transform": [
     {
       "aggregate": [{"op": "average", "field": "suicides_no", "as": "suicides_avg"}],

@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "Overview of Suicide Cases by Countries",
   "data": {"url": "https://ryan-khoo.github.io/assignment2/countries_cases.csv"},
-  "width": 600,
+  "width": 550,
   "height": 300,
   "mark": "bar",
 

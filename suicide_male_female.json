@@ -27,7 +27,7 @@
     {"filter": "datum.year == years"}
   ],
 
-  "mark": "arc",
+  "mark": {"type": "arc", "innerRadius": 65},
 
   "encoding": {
     "theta": {"field": "sum_cases", "type":"quantitative"},

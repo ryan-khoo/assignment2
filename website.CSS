@@ -1,0 +1,142 @@
+body {
+    color: #526066;
+}
+
+h2, h3 {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.6em;
+    text-align: justify;
+}
+
+.l-box {
+    padding: 0.5em 2em;
+}
+
+#SECTION1 {
+    width: 100%;
+    height: 750px;
+}
+
+.parent-container {
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: inline-block;
+}
+
+.left-child-container {
+    width: 67%;
+    height: 100%;
+    float: left;
+}
+
+.right-child-container {
+    display: inline-block;
+    width: 33%;
+    height: 100%;
+    float: right;
+}
+
+#SECTION3 {
+    width: 100%;
+    height: 850px;
+}
+
+.big-parent-container {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.parent-left-container {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.parent-right-container {
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+.inner-left-container {
+    width: 67%;
+    height: 100%;
+    float: left;
+}
+
+.inner-right-container {
+    width: 33%;
+    height: 100%;
+    float: right;
+}
+
+#SECTION_A {
+    height: 550px;
+    width: 100%;
+}
+
+.upper-container {
+    height: 50%;
+    padding: 10px;
+    margin: auto;
+    width: 60%;
+}
+
+.bottom-container {
+    height: 50%;
+    border: 3px solid #73AD21;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+/*
+ * -- BANNER --
+ * The top banner with the headings. By using a combination
+ * of `display: table;` and `display: table-cell;`, we can
+ * vertically center the text.
+ */
+
+.banner {
+    background: transparent url('cover_photo_02.jpg') 0 0 no-repeat fixed;
+    text-align: center;
+    background-size: 98% 100%;
+    background-position: center;
+    /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://24.media.tumblr.com/ccb268832580ac12951828a1c179de69/tumblr_mo2xbk8JUK1st5lhmo1_1280.jpg', sizingMethod='scale');*/
+
+    height: 250px;
+    width: 100%;
+    margin-bottom: 3em;
+    display: table;
+}
+
+.banner-head {
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-size: 2em;
+    color: black;
+    font-weight: 500;
+    text-shadow: 1 1px 1px black;
+}
+
+
+.footer {
+    display: inline-block;
+    position: relative;
+    background: #111;
+    color: #888;
+    text-align: center;
+}
+
+.footer a {
+    color: #ddd;
+}
+

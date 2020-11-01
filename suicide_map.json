@@ -15,7 +15,7 @@
     "lookup": "properties.NAME",
     "from":{
       "data":{
-        "url": "https://ryan-khoo.github.io/assignment2/country_2015.csv"
+        "url": "https://ryan-khoo.github.io/country_2015.csv"
       },
       "key": "country",
       "fields": ["country", "year", "suicides_100k"]

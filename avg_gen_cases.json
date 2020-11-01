@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": {"text": "Suicide Cases by Generations", "fontSize": 20, "fontWeight": "normal", "anchor": "middle"},
+  "data": {"url": "https://ryan-khoo.github.io/assignment2/master.csv"},
+  "mark": "area",
+  "width": 450, "height": 300,
+  "transform": [
+    {
+      "aggregate": [{"op": "average", "field": "suicides_no", "as": "suicides_avg"}],
+      "groupby": ["generation", "year"]
+    }
+  ],
+
+  "selection": {
+    "generation_highlight":{
+      "type": "multi",
+      "fields": ["generation"],
+      "bind": "legend"
+    }
+  },
+
+  "encoding": {
+    "x": {
+      "field": "year", 
+      "type": "temporal",
+      "axis": {"format": "%Y"}
+    },
+    "y": {
+      "field": "suicides_avg", 
+      "title": "Average Suicide",
+      "type": "quantitative"},
+    "color": {
+      "field": "generation",
+      "type": "nominal",
+      "title": "Generations",
+      "scale": {"range":["#253494", "#2c7fb8", "#41b6c4", "#7fcdbb", "#c7e9b4", "#ffffcc"]}
+    },
+    "tooltip": [
+      {"field": "generation", "type": "nominal", "title": "Generation"},
+      {"field": "suicides_avg", "type": "quantitative", "format": ".2f", "formatType": "number", "title": "Average suicide"}
+    ],
+    "opacity":{
+      "condition": {"selection": "generation_highlight", "value": 0.95},
+      "value": 0.4
+    }
+  }
+}

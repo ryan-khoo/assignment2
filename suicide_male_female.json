@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": {"text": "Suicide Cases by Gender", "fontSize": 20, "fontWeight": "normal", "anchor": "middle"},
+  "data": {"url": "https://ryan-khoo.github.io/assignment2/male_female_pie.csv"},
+
+  "params": [
+    {
+      "name": "years",
+      "value": 1985,
+      "bind": {
+        "input": "range",
+        "min": 1985,
+        "max": 2016,
+        "step": 1,
+        "name": "YEAR:"
+      }
+    }
+  ],
+
+  "width": 250, "height": 250,
+
+  "transform": [
+    {
+      "aggregate": [{"op":"sum","field":"cases", "as": "sum_cases"}],
+      "groupby":["year", "sex"]
+    },
+    {"filter": "datum.year == years"}
+  ],
+
+  "mark": {"type": "arc", "innerRadius": 70},
+
+  "encoding": {
+    "theta": {"field": "sum_cases", "type":"quantitative"},
+    "color": {
+      "field": "sex", 
+      "type":"nominal",
+      "scale": {"range": ["#c7e9b4", "#225ea8"]}
+    },
+    "tooltip": [
+      {"field": "sex", "type": "nominal"},
+      {"field": "sum_cases", "type": "quantitative"}
+    ]
+  },
+  "view": {"stroke": null}
+
+}

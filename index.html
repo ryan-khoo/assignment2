@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive pricing table.">
+    <title> &ndash; Suicide Overview &ndash;</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-4ZPLezkTZTsojWFhpdFembdzFudphhoOzIunR1wH6g1WQDzCAiPvDyitaK67mp0+" crossorigin="anonymous">
+    <link rel="stylesheet" href="website2.css">
+
+    <script src = "https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+</head>
+<body>
+
+
+<div class="banner">
+    <h2 class="banner-head">
+        Cast your anxieties on Him,<br>
+        because He cares for you.<br><br>
+        1 Peter 5:7
+    </h2>
+</div>
+
+<section>
+  <div class="container_1">
+    <div id="vis1">
+        <script type="text/javascript">
+          var spec = "https://ryan-khoo.github.io/assignment2/suicide_map.json";
+          vegaEmbed('#vis1', spec).then(function(result){}).catch(console.error);
+        </script>
+    </div>
+  </div>
+
+  <div class="container_2">
+    <p>
+        The above illustration represents an overview of suicide cases various countries based on the dataset made available. The idiom displayed above represents a chloropleth map containing the normalized rate of suicide cases of various countries. Based on the legend, the diverging colour palette consists of hues of yellow transitioning to blue. With interpretation, deep darker hues of blue indicates higher rate of suicide cases of the respective country.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container_3">
+      <div id="vis2">
+          <script type="text/javascript">
+            var spec = "https://ryan-khoo.github.io/assignment2/avg_gen_cases.json";
+            vegaEmbed('#vis2', spec).then(function(result){}).catch(console.error);
+          </script>
+      </div>
+  </div>
+
+  <div class="container_4">
+    <p>
+        The idiom applied in the above represents an area chart describing the movements of suicide cases which have been averaged. The average suicide cases is calculated and plotted based on different generations such as the g.i. generation whom are born in between 1901-1927 and were shaped by the 'Great Depression' and also participants of World War II. Following after that comes the silent generation whose population are comparatively small due to the "Great Depression" and have obtained its name due to the forming of leadership and civil rights movement comprising the "silent majority" and hence the silent generation. Next, contains the boomer generation infamously known as 'Baby Boomers'  for individuals born in between 1946 and 1964. Following the boomer generation comes generation X (1965-1976), Y (1977-1995), and Z generation. These different generations are split to represent the colour channel.
+    </p>
+  </div>
+</section>
+
+
+<section>
+  <div class="container_5">
+      <div id="vis3">
+          <script type="text/javascript">
+            var spec = "https://ryan-khoo.github.io/assignment2/heatmap_generation_suicide.json";
+            vegaEmbed('#vis3', spec).then(function(result){}).catch(console.error);
+          </script>
+      </div>
+  </div>
+
+  <div class="container_6">
+    <p>
+        To further understand the analysis made previously, a heatmap is visualised depicting the sum of these cases throughout the years 1985 to 2016. Heatmaps are useful idioms in identifying outliers and patterns and in this case, an outlier is captured typically in 2 regions which is the boomer generation in 1994 and generation x in 2010. Therefore, some possible conclusion may be deduced in the boomer generation for the year 1994 where suicide rates may have increased in the respective generation possibly due to depression or perhaps a financial crisis.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container_7">    
+    <div id="vis4">
+        <script type="text/javascript">
+          var spec = "https://ryan-khoo.github.io/assignment2/suicide_year_age.json";
+          vegaEmbed('#vis4', spec).then(function(result){}).catch(console.error);
+        </script>
+    </div>
+  </div>
+
+  <div class="container_8">
+    <p>
+        The graph above contains a divergent bar chart, also known as population pyramid which displays an overview of the total suicide cases among gender of different ages. Through interacting with the chart via slider which exhibits the corresponding with different years, a common observation is noted such that majority of these cases contribute from individuals in late 30's up until early 70's irrespective to gender.
+    </p>
+  </div>
+</section>
+
+
+  <div class="container_9">    
+    <div id="vis5">
+        <script type="text/javascript">
+          var spec = "https://ryan-khoo.github.io/assignment2/suicide_male_female.json";
+          vegaEmbed('#vis5', spec).then(function(result){}).catch(console.error);
+        </script>
+    </div>
+  </div>
+
+  <div class="container_10">
+    <p>
+        Aside from age, a clearer analysis is visualised to observe the ratio of suicide cases throughout the years solely based on gender and therefore concluding that majority of these cases derives from male individuals.
+    </p>
+  </div>
+
+</body>
+</html>

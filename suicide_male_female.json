@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": {"text": "Suicide Cases by Gender", "fontSize": 20, "fontWeight": "normal", "anchor": "middle"},
-  "data": {"url": "https://ryan-khoo.github.io/assignment2/male_female_pie.csv"},
+  "data": {"url": "https://ryan-khoo.github.io/male_female_pie.csv"},
 
   "params": [
     {

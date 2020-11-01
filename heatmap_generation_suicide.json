@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Sum of Suicide Cases from Different Generations",
+  "title": {"text": "Sum of Suicide Cases from Different Generations", "fontSize": 20, "fontWeight": "normal", "anchor": "middle"},
   "data": {"url": "https://ryan-khoo.github.io/assignment2/master_edit.csv"},
   "config": {
       "view": {

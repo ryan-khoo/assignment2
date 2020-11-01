@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": {"text": "Overview of Suicide Cases (1985 - 2016)", "anchor": "middle", "subtitle": "by Gender and Ages", "fontSize": 17, "fontWeight":200},
-  "data": {"url": "https://ryan-khoo.github.io/assignment2/suicides_year_age.csv"},
+  "data": {"url": "https://ryan-khoo.github.io/suicides_year_age.csv"},
 
   "params": [
     {

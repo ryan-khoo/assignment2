@@ -12,7 +12,7 @@
         "min": 1985,
         "max": 2016,
         "step": 1,
-        "name": "YEAR:"
+        "name": "Year:"
       }
     }
   ],
@@ -30,7 +30,7 @@
   "mark": {"type": "arc", "innerRadius": 70},
 
   "encoding": {
-    "theta": {"field": "sum_cases", "type":"quantitative"},
+    "theta": {"field": "sum_cases", "type":"quantitative", "title": "Total cases"},
     "color": {
       "field": "sex", 
       "type":"nominal",
